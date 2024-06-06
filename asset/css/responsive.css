@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* Tablet & mobile */
@@ -41,6 +44,58 @@
     opacity: 1;
     visibility: visible;
   }
+  /* 6. Menu */
+  .menu-drawer {
+    position: fixed;
+    background-color: rgb(20, 19, 19);
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* 7. close menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .hero__content {
+    order: 2;
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__row{
+    justify-content: center;
+  }
+  .s
 }
 
 /* Tablet */
@@ -50,8 +105,8 @@
 /* Mobile */
 @media (min-width: 767.98px) {
 }
-.hero,
-.footer,
-main {
+
+.footer
+ {
   display: none;
 }
